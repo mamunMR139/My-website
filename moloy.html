@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Exclusive reward offers: Claim $850 CashApp, $1,000 Walmart, $100 or $750 Costco gift cards. Trusted by 50k+ users. Limited spots!">
+  <title>RewardHub – Exclusive Premium Rewards</title>
+  <!-- Google Fonts + Font Awesome 6 (free) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      /* Premium dark background with subtle grain & depth */
+      background: radial-gradient(circle at 10% 20%, #0B1120, #03060C);
+      color: #E7ECF3;
+      line-height: 1.4;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+    /* Premium subtle overlay pattern */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDMiIGQ9Ik0wIDBoNDB2NDBIMHoiLz48cGF0aCBkPSJNMjAgMjBhMjAgMjAgMCAwIDEgMjAgMjAgMjAgMjAgMCAwIDEtMjAgMjAgMjAgMjAgMCAwIDEtMjAtMjAgMjAgMjAgMCAwIDEgMjAtMjB6IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMC4zIi8+PC9zdmc+');
+      background-repeat: repeat;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.5rem 1.8rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Trust bar premium glass */
+    .trust-bar {
+      background: rgba(15, 25, 45, 0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 80px;
+      padding: 0.6rem 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+      margin-bottom: 2rem;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 4px 12px;
+      border-radius: 40px;
+      color: #F2E8CF;
+      letter-spacing: 0.2px;
+    }
+    .trust-badge i {
+      color: #D4AF37;
+    }
+
+    /* Hero premium glow */
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .badge-label {
+      background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(212,175,55,0.05));
+      backdrop-filter: blur(4px);
+      color: #F5DEB3;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+      border: 0.5px solid rgba(212,175,55,0.4);
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFFFFF, #D4AF37, #E6C87A);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.3px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #C7D3E6;
+      max-width: 720px;
+      margin: 0 auto 1.2rem;
+      font-weight: 500;
+    }
+    .counter-wrapper {
+      background: rgba(10, 18, 30, 0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 60px;
+      padding: 0.6rem 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin-top: 10px;
+      font-weight: 600;
+      border: 1px solid rgba(212,175,55,0.3);
+      color: #F7F3E0;
+    }
+    .counter-wrapper i {
+      color: #E5B73B;
+    }
+
+    /* live feed (glass) */
+    .live-feed {
+      background: rgba(15, 25, 40, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 60px;
+      padding: 0.6rem 1.4rem;
+      margin: 0 auto 2rem;
+      width: fit-content;
+      max-width: 95%;
+      border: 1px solid rgba(212,175,55,0.4);
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .live-feed span i {
+      color: #E5B73B;
+    }
+    .pulse-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #D4AF37;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 6px gold;
+    }
+    @keyframes pulse { 0% { opacity: 0.4; transform: scale(0.8);} 100% { opacity: 1; transform: scale(1.2);} }
+
+    /* offer cards with premium metallic effect */
+    .offers-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      justify-content: center;
+      margin: 2rem 0 2rem;
+    }
+    .offer-card {
+      background: rgba(20, 30, 45, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 36px;
+      padding: 1.5rem 1rem 1.8rem;
+      flex: 1;
+      min-width: 210px;
+      max-width: 260px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,175,55,0.25);
+    }
+    .offer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 40px -12px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1);
+      border-color: rgba(212,175,55,0.6);
+    }
+    .offer-icon {
+      font-size: 2.6rem;
+      background: linear-gradient(145deg, #1E2A3A, #0F1725);
+      width: 75px;
+      height: 75px;
+      line-height: 75px;
+      border-radius: 60px;
+      margin: 0 auto 1rem;
+      color: #D4AF37;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      border: 1px solid rgba(212,175,55,0.3);
+    }
+    .offer-title {
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+      color: #FFFFFF;
+      letter-spacing: -0.2px;
+    }
+    .offer-price {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #E6C87A;
+      margin-bottom: 0.9rem;
+    }
+    .reward-btn {
+      display: block;
+      width: 100%;
+      padding: 0.9rem 0.5rem;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border-radius: 100px;
+      background: #2c6e49;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      text-align: center;
+      font-family: inherit;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      letter-spacing: 0.3px;
+    }
+    .reward-btn i {
+      margin-right: 8px;
+    }
+    /* premium button gradients */
+    .btn-cashapp { background: linear-gradient(105deg, #00D26A, #00994B); box-shadow: 0 8px 18px rgba(0,210,106,0.25); border: 1px solid rgba(255,255,255,0.2);}
+    .btn-walmart { background: linear-gradient(105deg, #2A6F9C, #1A4F73); box-shadow: 0 8px 18px rgba(42,111,156,0.3);}
+    .btn-costco1 { background: linear-gradient(105deg, #F39C12, #E67E22); box-shadow: 0 8px 18px rgba(243,156,18,0.3);}
+    .btn-costco2 { background: linear-gradient(105deg, #E67E22, #D35400); box-shadow: 0 8px 18px rgba(230,126,34,0.35);}
+    .reward-btn:hover { filter: brightness(1.07); transform: scale(0.98); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+
+    /* reviews section - glass premium */
+    .reviews-section {
+      background: rgba(12, 20, 32, 0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 48px;
+      padding: 2rem 2rem;
+      margin: 2.5rem 0;
+      border: 1px solid rgba(212,175,55,0.3);
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4);
+    }
+    .section-header h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #F5E6C4;
+    }
+    .star-rating {
+      color: #FFD966;
+      letter-spacing: 2px;
+      margin-top: 8px;
+    }
+    .reviews-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      justify-content: center;
+    }
+    .review-card {
+      background: rgba(25, 36, 50, 0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 28px;
+      padding: 1.4rem;
+      max-width: 320px;
+      flex: 1;
+      transition: all 0.2s;
+      border: 1px solid rgba(212,175,55,0.2);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .review-card:hover {
+      border-color: rgba(212,175,55,0.5);
+      background: rgba(30, 42, 58, 0.85);
+    }
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .avatar {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(145deg, #2C3E50, #1A252F);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #D4AF37;
+      border: 1px solid rgba(212,175,55,0.5);
+    }
+    .review-text {
+      font-size: 0.9rem;
+      line-height: 1.45;
+      color: #E2E8F0;
+      margin: 12px 0;
+    }
+    .verified {
+      color: #E5B73B;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* trust footer with gold accents */
+    .trust-footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0 1rem;
+      background: rgba(10, 18, 28, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 1.2rem;
+      border-radius: 48px;
+      border: 1px solid rgba(212,175,55,0.25);
+    }
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      color: #EFE5CA;
+    }
+    .badge-item i {
+      color: #D4AF37;
+    }
+
+    /* countdown premium */
+    .countdown-area {
+      background: linear-gradient(115deg, #0A111F, #04080F);
+      border-radius: 60px;
+      padding: 0.8rem 1.8rem;
+      display: inline-flex;
+      gap: 24px;
+      justify-content: center;
+      margin: 1rem auto;
+      color: #F5E6C4;
+      font-weight: 600;
+      flex-wrap: wrap;
+      border: 1px solid rgba(212,175,55,0.4);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+    .timer-block {
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
+      padding: 8px 18px;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      font-family: monospace;
+      letter-spacing: 1px;
+      border: 1px solid rgba(212,175,55,0.3);
+    }
+
+    .disclaimer {
+      font-size: 0.7rem;
+      text-align: center;
+      margin-top: 2.5rem;
+      color: #9AAEC2;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      padding-top: 1.5rem;
+    }
+
+    @media (max-width: 720px) {
+      .container { padding: 1rem 1.2rem; }
+      h1 { font-size: 1.9rem; }
+      .offers-grid { gap: 1rem; }
+      .offer-card { min-width: 170px; max-width: 100%; flex: 1 1 40%;}
+      .reward-btn { font-size: 0.9rem; }
+      .offer-title { font-size: 1.3rem; }
+    }
+    @media (max-width: 550px) {
+      .offer-card { min-width: 100%;}
+    }
+    a { text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Trust & Verified Header premium gold trim -->
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 1rem;">
+    <div class="trust-bar">
+      <div class="trust-badge"><i class="fas fa-crown"></i> Verified Secure</div>
+      <div class="trust-badge"><i class="fas fa-check-circle"></i> Trustpilot ★ 4.9</div>
+      <div class="trust-badge"><i class="fas fa-gem"></i> SSL Encrypted</div>
+    </div>
+    <div><i class="fas fa-star" style="color:#D4AF37;"></i> <span style="font-weight: 600; color:#F2E6CE;">55,000+ Rewarded Members</span></div>
+  </div>
+
+  <!-- Hero area premium -->
+  <div class="hero">
+    <div class="badge-label"><i class="fas fa-gift"></i> ✦ PRIVATE REWARD VAULT ✦</div>
+    <h1>Claim Your Exclusive <br>Gold-Tier Reward</h1>
+    <div class="hero-sub">Get up to $1,000 in premium gift cards. Real payouts, verified members only.</div>
+    <div class="counter-wrapper">
+      <i class="fas fa-fire-flame"></i> <span id="claimedCounter">1,284</span> members claimed today
+      <span class="pulse-dot"></span>
+    </div>
+    <!-- Live activity feed premium -->
+    <div class="live-feed">
+      <span><i class="fas fa-circle-check"></i> ✦ <strong>Ethan P.</strong> unlocked $1,000 Walmart</span>
+      <span><i class="fas fa-clock"></i> 2 min ago</span>
+      <span><i class="fas fa-circle-check"></i> ✦ <strong>Mia S.</strong> received <strong>$850 CashApp</strong></span>
+    </div>
+  </div>
+
+  <!-- OFFER GRID - 4 Premium Buttons (all links preserved) -->
+  <div class="offers-grid">
+    <!-- CashApp $850 -->
+    <div class="offer-card">
+      <div class="offer-icon"><i class="fab fa-cashapp"></i></div>
+      <div class="offer-title">CashApp</div>
+      <div class="offer-price">✦ $850 instant ✦</div>
+      <a href="https://www.af9m8trk.com/WCH116EL/5JY122KX/?s1=naffi" target="_blank" rel="noopener noreferrer" class="reward-btn btn-cashapp" id="btnCashApp">
+        <i class="fab fa-cashapp"></i> CashApp $850
+      </a>
+      <div style="font-size: 0.7rem; margin-top: 12px; color:#CBB67C;"><i class="fas fa-bolt"></i> Priority access</div>
+    </div>
+
+    <!-- Walmart $1,000 -->
+    <div class="offer-card">
+      <div class="offer-icon"><i class="fas fa-store"></i></div>
+      <div class="offer-title">Walmart</div>
+      <div class="offer-price">✦ $1,000 value ✦</div>
+      <a href="https://www.af9m8trk.com/WCH116EL/T6M12294/?s1=kkk" target="_blank" rel="noopener noreferrer" class="reward-btn btn-walmart" id="btnWalmart">
+        <i class="fas fa-cart-shopping"></i> Walmart $1,000
+      </a>
+      <div style="font-size: 0.7rem; margin-top: 12px; color:#CBB67C;"><i class="fas fa-gem"></i> Top reward</div>
+    </div>
+
+    <!-- Costco $100 -->
+    <div class="offer-card">
+      <div class="offer-icon"><i class="fas fa-warehouse"></i></div>
+      <div class="offer-title">Costco</div>
+      <div class="offer-price">✦ $100 Shop Card ✦</div>
+      <a href="https://www.af9m8trk.com/WCH116EL/3A9122KV/?s1=Kodo" target="_blank" rel="noopener noreferrer" class="reward-btn btn-costco1" id="btnCostco100">
+        <i class="fas fa-tag"></i> Costco $100
+      </a>
+      <div style="font-size: 0.7rem; margin-top: 12px; color:#CBB67C;"><i class="fas fa-chart-line"></i> Limited</div>
+    </div>
+
+    <!-- Costco $750 -->
+    <div class="offer-card">
+      <div class="offer-icon"><i class="fas fa-crown"></i></div>
+      <div class="offer-title">Costco Gold</div>
+      <div class="offer-price">✦ $750 premium ✦</div>
+      <a href="https://www.af9m8trk.com/WCH116EL/NB9123XG/?s1=hhhh" target="_blank" rel="noopener noreferrer" class="reward-btn btn-costco2" id="btnCostco750">
+        <i class="fas fa-gift"></i> Costco $750
+      </a>
+      <div style="font-size: 0.7rem; margin-top: 12px; color:#CBB67C;"><i class="fas fa-star"></i> Elite choice</div>
+    </div>
+  </div>
+
+  <!-- COUNTDOWN Timer luxury -->
+  <div style="text-align: center; margin-bottom: 1rem;">
+    <div class="countdown-area">
+      <span><i class="far fa-hourglass-half"></i> ⏳ Offers expire in:</span>
+      <div class="timer-block" id="daysBox">00d</div>
+      <div class="timer-block" id="hoursBox">00h</div>
+      <div class="timer-block" id="minutesBox">00m</div>
+      <div class="timer-block" id="secondsBox">00s</div>
+    </div>
+    <p style="font-size: 0.8rem; margin-top: 10px; opacity:0.8;">✨ Verified members only — select your reward to secure ✨</p>
+  </div>
+
+  <!-- Positive User Reviews - Premium glowing testimonials -->
+  <div class="reviews-section">
+    <div class="section-header">
+      <h2>✦ Real Reviews • Verified Winners ✦</h2>
+      <div class="star-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.95/5 (3,142 reviews)
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="reviewer">
+          <div class="avatar">JD</div>
+          <div><strong style="color:#F5E6C4;">James D.</strong><div class="verified"><i class="fas fa-check-circle"></i> Verified Winner</div></div>
+        </div>
+        <div class="review-text">"Received my $850 CashApp reward in under 6 hours! Premium service and effortless. Absolutely legit."</div>
+        <div><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i></div>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <div class="avatar">MK</div>
+          <div><strong style="color:#F5E6C4;">Megan K.</strong><div class="verified"><i class="fas fa-shield-alt"></i> Trusted Member</div></div>
+        </div>
+        <div class="review-text">"Walmart $1,000 card changed our holidays! Fast digital delivery, premium support. Highly recommend!"</div>
+        <div><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i></div>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <div class="avatar">LR</div>
+          <div><strong style="color:#F5E6C4;">Linda R.</strong><div class="verified"><i class="fas fa-crown"></i> Costco Elite</div></div>
+        </div>
+        <div class="review-text">"Costco $750 reward worked perfectly. Bought a new TV & groceries. The platform is premium and reliable."</div>
+        <div><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i></div>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <div class="avatar">TP</div>
+          <div><strong style="color:#F5E6C4;">Tony P.</strong><div class="verified"><i class="fas fa-gem"></i> Gold Member</div></div>
+        </div>
+        <div class="review-text">"Even the $100 Costco offer came through instantly. After that I trusted the $750 offer. Top-tier platform!"</div>
+        <div><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i><i class="fas fa-star" style="color:#FFD966;"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- additional trust badges luxury -->
+  <div class="trust-footer-row">
+    <div class="badge-item"><i class="fas fa-hand-holding-heart fa-lg"></i> 30-Day Reward Guarantee</div>
+    <div class="badge-item"><i class="fas fa-user-shield fa-lg"></i> Zero Hidden Fees</div>
+    <div class="badge-item"><i class="fas fa-concierge-bell"></i> 24/7 Premium Support</div>
+    <div class="badge-item"><i class="fas fa-credit-card"></i> Secure Encryption</div>
+  </div>
+
+  <!-- Footer Disclaimer -->
+  <div class="disclaimer">
+    <p>✨ Exclusive reward partner offer. By clicking any button you’ll be redirected to a trusted third-party platform. Must be 18+ and complete steps. Rewards subject to availability. ✨</p>
+    <p style="margin-top: 12px;">© 2025 RewardHub • Verified Premium Network • 70,000+ gift cards delivered</p>
+  </div>
+</div>
+
+<script>
+  // dynamic claimed counter for social proof
+  let claimedCount = 1284;
+  const claimedSpan = document.getElementById('claimedCounter');
+  if(claimedSpan) {
+    setInterval(() => {
+      let increment = Math.floor(Math.random() * 2) + 1;
+      claimedCount += increment;
+      claimedSpan.innerText = claimedCount.toLocaleString();
+    }, 14500);
+  }
+
+  // countdown timer: 2 days 14h 37m for urgency (premium)
+  function getTargetDate() {
+    let now = new Date();
+    let target = new Date(now);
+    target.setDate(now.getDate() + 2);
+    target.setHours(now.getHours() + 14);
+    target.setMinutes(now.getMinutes() + 37);
+    target.setSeconds(0);
+    return target;
+  }
+  let countdownDate = getTargetDate();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+    if (distance < 0) {
+      countdownDate = getTargetDate();
+      return updateCountdown();
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (86400000)) / (3600000));
+    const minutes = Math.floor((distance % (3600000)) / (60000));
+    const seconds = Math.floor((distance % (60000)) / 1000);
+
+    if(document.getElementById('daysBox')) document.getElementById('daysBox').innerHTML = days + "d";
+    if(document.getElementById('hoursBox')) document.getElementById('hoursBox').innerHTML = hours + "h";
+    if(document.getElementById('minutesBox')) document.getElementById('minutesBox').innerHTML = minutes + "m";
+    if(document.getElementById('secondsBox')) document.getElementById('secondsBox').innerHTML = seconds + "s";
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Live feed rotation (premium dynamic updates)
+  const liveFeedDiv = document.querySelector('.live-feed');
+  const userNameList = ['Sophia C.', 'Liam W.', 'Isabella R.', 'Noah E.', 'Ava G.', 'Oliver B.', 'Charlotte K.', 'Elijah M.'];
+  const rewardList = ['$850 CashApp', '$1,000 Walmart', '$100 Costco', '$750 Costco Gold'];
+  if(liveFeedDiv) {
+    setInterval(() => {
+      const randomUser = userNameList[Math.floor(Math.random() * userNameList.length)];
+      const randomReward = rewardList[Math.floor(Math.random() * rewardList.length)];
+      const currentSpans = liveFeedDiv.querySelectorAll('span');
+      if(currentSpans.length >= 4) {
+        if(currentSpans.length >= 2) {
+          liveFeedDiv.removeChild(currentSpans[0]);
+          liveFeedDiv.removeChild(currentSpans[0]);
+        }
+      }
+      const newSpan1 = document.createElement('span');
+      newSpan1.innerHTML = `<i class="fas fa-circle-check"></i> ✦ <strong>${randomUser}</strong> unlocked ${randomReward}`;
+      const newSpan2 = document.createElement('span');
+      newSpan2.innerHTML = `<i class="fas fa-clock"></i> moments ago`;
+      liveFeedDiv.appendChild(newSpan1);
+      liveFeedDiv.appendChild(newSpan2);
+    }, 19000);
+  }
+
+  // optional click tracking (non-intrusive)
+  const btns = document.querySelectorAll('.reward-btn');
+  btns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // no redirect interference
+      console.log('Premium reward selected: ' + btn.innerText);
+    });
+  });
+</script>
+</body>
+</html>
